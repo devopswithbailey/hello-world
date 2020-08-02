@@ -1,0 +1,4 @@
+
+clusterName: 'YOUR K8S CLUSTER NAME'
+namespace: 'YOUR K8S NAMESPACE'
+clientSecret: 'YOUR K8S NAMESPACE CREDENTIAL'

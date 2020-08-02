@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-deployment
+  labels:
+    app: blog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blog
+  template:
+    metadata:
+      labels:
+        app: blog
+    spec:
+      containers:
+      - name: blog
+        image: docker.repo1.uhc.com/dpaas/dev/docusaurus
+        ports:
+          - containerPort: 3000
+        resources:
+            limits:
+              cpu: 1
+              memory: 2Gi
+            requests:
+              cpu: 1
+              memory: 2Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog-svc
+  labels:
+    run: blog-svc
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 10.202.30.198
+  ports:
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP
+  selector:
+    app: blog

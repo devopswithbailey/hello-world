@@ -1,0 +1,11 @@
+env.GIT_TAG_PREFIX = 'v'
+env.GIT_CREDENTIALS_ID = 'YOUR GIT_CREDENTIALS_ID FOR JENKINS'
+env.GITHUB_TOKEN= 'YOUR_github_api_token'
+env.GITHUB_CREDENTIALS_SSH='YOUR_github_ssh'
+env.LAST_RELEASE_VERSION = glVersionsGetLatestSemanticVersionFromTag gitTagPrefix: '',defaultInitialVersion: '0.0.1',gitCredentials: "${env.GITHUB_CREDENTIALS_SSH}"
+env.NEXT_VERSION = glVersionsBump version : "${env.LAST_RELEASE_VERSION}", patchLevel: 'minor'
+env.DOCKER_REPOHOST = "YOUR DOCKER REGISTRY HOST"
+env.DOCKER_NONPROD_NS = "YOUR DOCKER REGISTRY NAMESPACE"
+env.DOCKER_REPO = "docusaurus"
+env.ARTIFACT_NAME = "docusaurus"
+env.DRAFT_RELEASE=false
