@@ -16,7 +16,7 @@ Hello World for DevOps and CICD pipeline
     ```
     npm run serve --build
     ```
-## Deploy blog
+## Deploy Blog
 ### Docker
 1. [Dockerfile](Dockerfile)
 2. Build docker image
