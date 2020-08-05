@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: blog
-        image: docker.repo1.uhc.com/dpaas/dev/docusaurus
+        image: your_docker_registry/blog:0.1.0
         ports:
           - containerPort: 3000
         resources:
@@ -35,8 +35,7 @@ metadata:
   labels:
     run: blog-svc
 spec:
-  type: LoadBalancer
-  loadBalancerIP: 10.202.30.198
+  type: NodePort
   ports:
     - port: 3000
       targetPort: 3000
