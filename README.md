@@ -1,5 +1,5 @@
 # hello-world
-Hello World for DevOps and CICD pipeline
+Hello World for DevOps with Bailey.
 
 ## Requirements
 1. Docker registry
