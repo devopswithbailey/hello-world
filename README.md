@@ -1,6 +1,8 @@
 # hello-world
 Hello World for DevOps with Bailey.
 
+[YouTube](https://www.youtube.com/playlist?list=PL-zmHG6tK01HpT7yg9ojUyWs2eTZXFgwK) for this project.
+
 ## Requirements
 1. Docker registry
 2. Kubernetes cluster
